@@ -1,0 +1,227 @@
+.bootstrap-growl{
+    border-radius: 0;
+}
+textarea {
+    resize: vertical;
+}
+.black {
+    color: #000;
+}
+.red {
+    color: #ea0651;
+}
+.char_count{
+    float: right;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 5px;
+    font-style: italic;
+}
+.box {
+    background: #fbfbfb;
+}
+.select2-selection {
+    border-radius: 0!important;
+    border-color: #d2d6de!important;
+    min-height: 35px!important;
+}
+.select2-container--default 
+.select2-selection--single 
+.select2-selection__arrow b
+{
+    top: 55%!important;    
+}
+.no-radius {
+    border-radius: 0!important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice{
+    color: #6f6f6f;
+}
+#list-table, .select2 {
+    width: 100%!important;
+}
+.bgRed {
+    background: red!important;
+    color: #fff!important;
+}
+.bgGreen-0{
+    background: rgba(161, 253, 104, 0.55)
+}
+.bgGreen-1{
+    background: #a2fd69;
+}
+.bgGreen-2{
+    background: #67d422;
+}
+.bgGreen-3{
+    background: #4eaf11;
+    color: #fff;
+}
+.bgGreen-4{
+    background: #358802;
+    color: #fff;
+}
+.keterangan_S {
+    background: #adc2ff!important;
+}
+.keterangan_A {
+    background: #ffadad!important;
+}
+.keterangan_I {
+    background: #ffc1fa!important;
+}
+.keterangan_C {
+    background: #feffc3!important;
+}
+.border-bottom{
+    border-bottom: 1px solid #898989!important;
+}
+.border-top{
+    border-top: 1px solid #898989!important;
+}
+.no-bg{
+    background: none!important;
+    background-color:transparent!important;
+}
+.no-border{
+    border: none!important;
+}
+
+/* Plugin will add this class to blurred image, providing you with control over certain aspects */
+#content-dashboard {
+    background: url('../images/bg.png');
+    -webkit-background-size: cover; /* For WebKit*/
+    -moz-background-size: cover;    /* Mozilla*/
+    -o-background-size: cover;      /* Opera*/
+    background-size: cover;         /* Generic*/
+    min-height: 500px;
+}
+.login-page, .register-page {
+    background: url(../images/bg.png)!important;
+    -webkit-background-size: cover1;
+    -moz-background-size: cover!important;
+    -o-background-size: cover!important;
+    background-size: cover!important;
+}
+#content-dashboard .overlay {
+    min-height: 500px;
+    background: rgba(0, 0, 0, 0.49);
+    color: #fff;
+    margin: -15px;
+    border-radius: 0;
+    padding: 15px;
+
+}
+#content-dashboard h3 {
+    font-weight: bold;
+}
+#preview {
+    height: 300px;
+}
+.bg-blur {
+    z-index: -2;
+    opacity: 0;
+    position: fixed;
+    min-height: 100%;
+    height: auto;
+    display: block;
+    top: 0;
+    max-height: none;
+    /* Add this CSS to remove transparent border around the image */
+    left: -10%;
+    width: 110%;
+}
+/*
+    An element with this class is added by the plugin to provide an overlay above the blurred image
+    It could drastically improve the appearance of the blurred image for content readability
+*/
+.bg-blur-overlay {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0.15+0,1+100 */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjE1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0.15) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.15)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.15) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0.15) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0.15) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0.15) 0%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#000000',GradientType=0 ); /* IE6-8 */
+}
+.sidebar-menu>li>.treeview-menu>li{
+    padding-left: 25px 
+}
+.sidebar-menu>li>.treeview-menu>li>ul.treeview-menu{
+    border-top: 1px solid #dddddd;
+}
+.sidebar-menu>li>.treeview-menu>li>a, .sidebar-menu>li>.treeview-menu>li>.treeview-menu>li>a{
+    border-left: 1px solid #dddddd;
+}
+.sidebar-menu>li>.treeview-menu>li>a:before, .sidebar-menu>li>.treeview-menu>li>.treeview-menu>li>a:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    left: -3px;
+    top: 13px;
+    background-color: #fff;
+    border: 1px solid #e2e2e2;
+    z-index: 2;
+}
+.sidebar-menu>li>.treeview-menu>li.active>a:before {
+    background-color: #e2e2e2;
+}
+.sidebar-menu>li {
+    border-top: 1px solid #ddd;
+    margin-top: -1px;
+}
+.sidebar-menu>li:last-child {
+    border-bottom: 1px solid #ddd;
+}
+.nowrap {
+    white-space: nowrap;
+}
+#imagePreview {
+    width: 100%;
+}
+#inputImage {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+.required::after {
+    content: "*";
+    color: red;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 5px;
+    font-weight: bold;
+}
+.content-header>.breadcrumb>li>a{
+    text-transform: capitalize;
+}
+.select-loader{
+    float: right;
+    position: absolute;
+    top: 27px;
+    right: 8px;
+    z-index: 5;
+    font-size: 30px;
+}
+.table th {
+    white-space: nowrap
+} 
+.link-table-pane {
+    font-size: 12px;
+    display: inline-block
+} 
+.link-table-pane span {
+    color: #666;
+} 
+.link-table-pane .active {
+    font-weight: bold;
+}

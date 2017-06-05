@@ -1,0 +1,25 @@
+{
+    "name": "Member",
+    "alias": "membership",
+    "description": "Mengelola member",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Membership\\Providers\\SP"
+    ],
+    "aliases": [],
+    "files": [
+        "start.php"
+    ],
+    "requires": [],
+    "author": {
+        "name": "Yuda Prawira",
+        "site": "http:\/\/yuda.tk"
+    },
+    "info": {
+        "version": 1,
+        "date": "2017-06-03 08:54:45",
+        "changelog": ""
+    }
+}

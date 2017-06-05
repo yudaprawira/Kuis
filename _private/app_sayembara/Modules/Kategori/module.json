@@ -1,0 +1,25 @@
+{
+    "name": "Kategori",
+    "alias": "kategori",
+    "description": "Mengelola kategori",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Kategori\\Providers\\SP"
+    ],
+    "aliases": [],
+    "files": [
+        "start.php"
+    ],
+    "requires": [],
+    "author": {
+        "name": "Yuda Prawira",
+        "site": "http:\/\/yuda.tk"
+    },
+    "info": {
+        "version": 1,
+        "date": "2017-06-03 04:17:49",
+        "changelog": ""
+    }
+}
