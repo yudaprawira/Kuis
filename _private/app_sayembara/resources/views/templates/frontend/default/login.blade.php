@@ -33,14 +33,11 @@
 @push('scripts')
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <script type="text/javascript">
-<<<<<<< HEAD
     
     @if ( val($_GET, 'out') )
     signOut();
     @endif
 
-=======
->>>>>>> origin/master
     function onSignIn(googleUser) 
 	{
 		var profile = googleUser.getBasicProfile();
