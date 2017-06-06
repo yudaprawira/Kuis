@@ -40,6 +40,9 @@
 
     function onSignIn(googleUser) 
 	{
+        @if ( val($_GET, 'out') )
+        signOut();
+        @else
 		var profile = googleUser.getBasicProfile();
 		var rowData = {
             'id' : profile.getId(),
@@ -66,6 +69,7 @@
 				}
             },
         }).done(function(){   });
+        @endif
     }
 	function signOut() 
 	{
