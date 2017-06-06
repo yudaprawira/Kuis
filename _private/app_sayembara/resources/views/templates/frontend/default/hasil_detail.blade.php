@@ -39,26 +39,23 @@
             </div>
 
             @if ( !empty( val($result, 'detail') ) )
-            <ul class="demo-list-three mdl-list">
+                <table class="mdl-data-table mdl-shadow--2dp" style="width: 100%;white-space: normal!important;">
                 @foreach(val($result, 'detail') as $k=>$v)
-                <li class="mdl-list__item mdl-list__item--three-line">
-                    <span class="mdl-list__item-secondary-content" style="padding: 15px;">
+                <tr>
+                    <td style="vertical-align: top; width: 10px;">
                         @if ( val($v, 'status') )
                         <a class="mdl-list__item-secondary-action mdl-color-text--green" href="#"><i class="material-icons">check_circle</i></a>
                         @else
                         <a class="mdl-list__item-secondary-action mdl-color-text--red" href="#"><i class="material-icons">remove_circle</i></a>
                         @endif
-                    </a>
-                    </span>
-                    <span class="mdl-list__item-primary-content">
-                        <span>{{ val($v, 'question') }}</span>
-                        <span class="mdl-list__item-text-body">
-                            {{ val($v, 'answer') }}
-                        </span>
-                    </span>
-                </li>
+                    </td>
+                    <td class="mdl-data-table__cell--non-numeric">
+                        <strong>{{ val($v, 'question') }}</strong><br/>
+                        <small>{{ val($v, 'answer') }}</small>
+                    </td>
+                </tr>
                 @endforeach
-            </ul>
+                </table>
             @endif
 
              <div style="float:left;padding: 30px 0 0;">
@@ -81,6 +78,7 @@
 @push('styles')
 <link href="{{ $pub_url }}/css/jquery.circliful.css" rel="stylesheet"/>
 <style>
+
 </style>
 @endpush
 @push('scripts')

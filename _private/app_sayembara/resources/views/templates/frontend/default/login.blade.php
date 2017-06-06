@@ -1,6 +1,7 @@
 @extends( config('app.template') . 'layouts.master')
 
 @section('content')
+<meta name="google-signin-client_id" content="762869468686-nm51ufclv6n9sn63ltuc957qlkmlo56s.apps.googleusercontent.com">
 <main class="mdl-layout__content mdl-color--grey-100">
     <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
         <div class="mdl-layout-spacer"></div>
@@ -13,7 +14,7 @@
             
                 <!-- Button that handles sign-in/sign-out -->
                 <div style="text-align: center;padding: 30px 0 0;" id="form-login" data-token="{{ csrf_token() }}" data-store="{{ url('login/save') }}">
-                    <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in">Sign in with Google</button>
+                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
                 </div>
             </div>
         </div>
@@ -22,36 +23,54 @@
 </main>
 @stop
 @push('styles')
+<style>
+	.abcRioButtonLightBlue{
+		margin: 0 auto;
+	}
+</style>
 @endpush
 
 @push('scripts')
-<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyD_G_ZNknZvIsJHnh3SZjYRQaYhYA6_nu0",
-    authDomain: "kemanagitu-6f3aa.firebaseapp.com",
-    databaseURL: "https://kemanagitu-6f3aa.firebaseio.com",
-    projectId: "kemanagitu-6f3aa",
-    storageBucket: "kemanagitu-6f3aa.appspot.com",
-    messagingSenderId: "372322146671"
-  };
-  firebase.initializeApp(config);
-</script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 <script type="text/javascript">
-    $(document).on('click', '#quickstart-sign-in', function(){
-        var ypBase = new ypFireBase();
-            ypBase.auth('google');
-    });
-    function loading(type){
-        if ( type==1 )
-        {
-            $('#quickstart-sign-in').attr('disabled', true);
-        }
-        else
-        {
-            $('#quickstart-sign-in').attr('disabled', false);
-        }
+    
+    signOut();
+
+    function onSignIn(googleUser) 
+	{
+		var profile = googleUser.getBasicProfile();
+		var rowData = {
+            'id' : profile.getId(),
+            'nama' : profile.getName(),
+            'image' : profile.getImageUrl(),
+            'email' : profile.getEmail(),
+            'type' : 'google',
+            '_token': $('#form-login').data('token')
+        };
+
+        $.ajax({
+            type		: 'POST',
+            url			: $('#form-login').data('store'),
+            data        : rowData,
+            beforeSend	: function(xhr) {  },
+            success		: function(dt){                
+                swal(dt.data_user,
+                function(){
+                    window.location.href="/";
+                });
+				if ( dt.data_user.type!='success' )
+				{
+					signOut();
+				}
+            },
+        }).done(function(){   });
     }
+	function signOut() 
+	{
+		var auth2 = gapi.auth2.getAuthInstance();
+		auth2.signOut().then(function () {
+		  console.log('User signed out.');
+		});
+	}
 </script>
 @endpush

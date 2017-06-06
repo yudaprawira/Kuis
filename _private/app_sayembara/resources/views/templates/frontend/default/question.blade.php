@@ -8,7 +8,7 @@
     <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
         <div class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">
         <h2 class="mdl-card__title-text">Answer the questions</h2>
-        <span id="time_spent" style="position: absolute;right: 5px;font-size: 12px;">00:00:00</span>
+        <span id="time_spent" style="position: absolute;right: 5px;font-size: 12px;"></span>
         </div>
         <div class="mdl-card__supporting-text mdl-color-text--grey-600">
 
@@ -81,10 +81,10 @@
         return false;
     });
 
-    ping();
+    /*ping();
     setInterval(function(){
         ping();
-    },1000);
+    },1000);*/
 
     function ping()
     {

@@ -77,7 +77,7 @@ class HomeController extends BaseController
             session::put('ses_fe_start', time());
         }
 
-        $limit = 5;
+        $limit = 10;
         $categories = Kategori::where('status', '1')->with('rel_soal')->get();
 
         $this->dataView['rows'] = array();
