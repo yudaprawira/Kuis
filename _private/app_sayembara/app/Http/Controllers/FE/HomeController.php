@@ -24,7 +24,7 @@ class HomeController extends BaseController
     {
         session::flush();
 
-        return redirect(url('login'));
+        return redirect(url('login?out=1'));
     }
     
     function ping()

@@ -38,7 +38,7 @@
                 </div>
             </div>
 
-            @if ( !empty( val($result, 'detail') ) )
+            @if ( !empty( val($result, 'detail') ) && val($_GET, 'show') )
                 <table class="mdl-data-table mdl-shadow--2dp" style="width: 100%;white-space: normal!important;">
                 @foreach(val($result, 'detail') as $k=>$v)
                 <tr>
